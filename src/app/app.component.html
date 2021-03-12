@@ -1,0 +1,39 @@
+<div class="esempio">
+  <h1>Esempio 1</h1>
+  <label>Ho due elementi, quando sono sopra md li metto di lato, quando vado sotto in colonna</label>
+
+  <div fxLayout="row wrap"
+       fxLayout.lt-md="column"
+       fxLayoutGap="32px"
+  >
+    <app-card fxFlex="auto"> 1</app-card>
+    <app-card fxFlex="auto"> 2</app-card>
+  </div>
+
+</div>
+
+<div class="esempio">
+  <h1>Esempio 2</h1>
+  <div fxLayout="row"
+       fxLayoutAlign="center">
+    <img fxFlex="50%" fxFlex.lt-md="100%" src="assets/esempio2.png">
+  </div>
+  <div>
+    <div fxLayout="row">
+      <app-card fxFlex="auto"> A</app-card>
+    </div>
+    <div fxLayout="row wrap"
+         fxLayout.lt-sm="column">
+      <app-card fxFlex="auto"> C</app-card>
+      <app-card fxFlex="auto"
+                fxFlexOrder.lt-md="-1"
+                fxFlex.lt-md="100%"> B
+      </app-card>
+      <app-card fxFlex="auto"> D
+      </app-card>
+    </div>
+    <div fxLayout="row">
+      <app-card fxFlex="auto"> E</app-card>
+    </div>
+  </div>
+</div>
